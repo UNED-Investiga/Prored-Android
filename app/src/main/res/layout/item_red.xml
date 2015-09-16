@@ -19,7 +19,16 @@
         android:gravity="center"
         android:text="Nombre Red"
         android:id="@+id/txtNombreRed"
-        android:textColor="@color/negro"/>
+        android:textColor="@color/negro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
 
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha"
+        android:id="@+id/txtfecha"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/abc_input_method_navigation_guard" />
 </LinearLayout>
