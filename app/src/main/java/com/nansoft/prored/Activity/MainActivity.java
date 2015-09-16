@@ -1,4 +1,4 @@
-package com.nansoft.prored.Acitivity;
+package com.nansoft.prored.Activity;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
