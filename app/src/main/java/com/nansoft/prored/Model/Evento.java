@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Created by PC on 16/09/2015.
  */
-public class Eventos {
+public class Evento {
     private String Id;
     private String Nombre;
     private String Descripcion;
