@@ -69,6 +69,8 @@ public class EventoAdapter extends ArrayAdapter<Evento>
 
     }
 
+    // a
+
     // guarda el estado de cada vista la primera vez que se dibuja
     static class ViewHolder
     {

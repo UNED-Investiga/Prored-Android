@@ -73,8 +73,8 @@ public class RedAdapter extends ArrayAdapter<Red>
                 .load(currentItem.getUrlImage().trim())
                 .asBitmap()
                 .fitCenter()
-                .placeholder(R.drawable.picture)
-                .error(R.drawable.picture_removed)
+                .placeholder(R.mipmap.cargar_imagen)
+                .error(R.mipmap.sin_imagen)
                 .into(holder.imgvLogoRed);
 
         return row;
