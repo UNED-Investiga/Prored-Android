@@ -1,4 +1,4 @@
-package com.nansoft.prored;
+package com.nansoft.prored.Model;
 
 /**
  * Created by PC on 16/09/2015.
