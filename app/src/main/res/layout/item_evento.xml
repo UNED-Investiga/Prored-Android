@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imglogoevento"
+        android:layout_marginTop="63dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:id="@+id/txtnombre"
+        android:layout_below="@+id/imglogoevento"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/abc_input_method_navigation_guard" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha"
+        android:id="@+id/txtfecha"
+        android:layout_below="@+id/txtnombre"
+        android:layout_alignLeft="@+id/txtnombre"
+        android:layout_alignStart="@+id/txtnombre"
+        android:textColor="@color/abc_input_method_navigation_guard" />
+</RelativeLayout>
