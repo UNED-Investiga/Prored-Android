@@ -65,6 +65,7 @@ public class RedAdapter extends ArrayAdapter<Red>
 
         //holder.txtvTituloRuta.setText(currentItem.getNombreOpcion());
         return row;
+        //a
 
     }
 
