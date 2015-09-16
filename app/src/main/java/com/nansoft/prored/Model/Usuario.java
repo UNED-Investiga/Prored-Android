@@ -27,6 +27,7 @@ public class Usuario {
         Nombre=pNombre;
 
     }
+    ////a
     public String getPrimerApellido(){
         return PrimerApellido;
     }
