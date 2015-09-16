@@ -37,15 +37,16 @@ public class RedAdapter extends ArrayAdapter<Red>
 
     // regresa la vista de cada elemento de la lista
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-
+    public View getView(int position, View convertView, ViewGroup parent)
+    {
         View row = convertView;
 
+        // se obtiene el elemento actual
         final Red currentItem = getItem(position);
 
-
         // verificamos si la fila que se va dibujar no existe
-        if (row == null) {
+        if (row == null)
+        {
             // si es así la creamos
             LayoutInflater inflater = ((Activity) mContext).getLayoutInflater();
             row = inflater.inflate(mLayoutResourceId, parent, false);
@@ -72,8 +73,7 @@ public class RedAdapter extends ArrayAdapter<Red>
     // guarda el estado de cada vista la primera vez que se dibuja
     static class ViewHolder
     {
-        protected ImageView imgLogoEmpresaa;
-        protected TextView txtvTituloRuta;
-        //protected TextView txtvCostoRuta;
+        protected ImageView imgvLogoRed;
+        protected TextView txtvNombreRed;
     }
 }
