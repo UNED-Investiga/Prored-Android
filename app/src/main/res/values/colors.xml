@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="negro">#000</color>
+    <color name="action_bar">#4E6B66</color>
 </resources>
