@@ -5,4 +5,15 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="stlBaseComponent">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+
+    <style name="stlLetras" parent="stlBaseComponent">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/negro</item>
+    </style>
+
 </resources>
