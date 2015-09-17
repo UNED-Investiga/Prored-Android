@@ -12,19 +12,40 @@ import com.nansoft.prored.R;
 /**
  * Created by PC on 17/09/2015.
  */
-    public class ImageAdapter extends BaseAdapter {
-        private Context context;
-        private final String[] StrValues;
 
-        public ImageAdapter(Context context, String[] StrValues) {
-            this.context = context;
-            this.StrValues = StrValues;
+    public class ImageAdapter extends BaseAdapter {
+
+        String[] textArray;
+        Context contxt;
+
+        public ImageAdapter(String[] textArr, Context context) {
+            textArray = textArr;
+            contxt=context;
         }
 
-        // getView that displays the data at the specified position in the data set.
+        @Override
+        public int getCount() {
+
+            return textArray.length;
+        }
+
+        @Override
+        public Object getItem(int arg0) {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public long getItemId(int arg0) {
+            // TODO Auto-generated method stub
+            return 0;
+        }
+
+        @Override
         public View getView(int position, View convertView, ViewGroup parent) {
+
             // create a new LayoutInflater
-            LayoutInflater inflater = (LayoutInflater) context
+            LayoutInflater inflater = (LayoutInflater) contxt
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
             View gridView;
@@ -32,35 +53,18 @@ import com.nansoft.prored.R;
             convertView = null;// avoids recycling of grid view
             if (convertView == null) {
 
-                gridView = new View(context);
+                gridView = new View(contxt);
                 // inflating grid view item
                 gridView = inflater.inflate(R.layout.list_view_item, null);
 
                 // set value into textview
                 TextView textView = (TextView) gridView
-                        .findViewById(R.id.list_item_label);
-                textView.setText(StrValues[position]);
+                        .findViewById(R.id.textView_id);
+                textView.setText(textArray[position]);
 
             }
 
             return gridView;
         }
 
-        // Total number of items contained within the adapter
-        @Override
-        public int getCount() {
-            return StrValues.length;
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
-
     }
-
