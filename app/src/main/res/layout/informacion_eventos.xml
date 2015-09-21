@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="NOMBRE DEL EVENTO"
+        android:id="@+id/txtnombreevento"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="81dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="FECHA"
+        android:id="@+id/txtfecha"
+        android:layout_weight="0.10" />
+
+    <TextView
+        android:layout_width="79dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="LUGAR"
+        android:id="@+id/txtlugar"
+        android:layout_gravity="center_horizontal"
+        android:singleLine="true" />
+
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="COSTO"
+        android:id="@+id/txtcosto"
+        android:layout_gravity="right" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="DESCRIPCION"
+        android:id="@+id/txtdescripcion" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ptxtdescripcion"
+        android:layout_weight="0.37" />
+
+</LinearLayout>
