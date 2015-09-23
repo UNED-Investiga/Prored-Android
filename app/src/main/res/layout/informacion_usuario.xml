@@ -24,8 +24,160 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
-        android:src="@drawable/"
+        android:src="@drawable/usuario"
 
         />
+    <LinearLayout
+        android:id="@+id/datos"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+        <TextView
+            android:id="@+id/txtemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:layout_weight="1"
+            android:textColor="@color/colorletras"
+            />
+        <TextView
+            android:id="@+id/txtlugar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lugar"
+            android:layout_weight="1"
+            android:textColor="@color/colorletras"
+            />
+        <TextView
+            android:id="@+id/txtcargo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cargo"
+            android:layout_weight="1"
+            android:textColor="@color/colorletras"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/todas_imgview"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+        <ImageView
+            android:id="@+id/imgview_fecha"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/calendario"
+            />
+
+        <ImageView
+            android:id="@+id/imgview_lugar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/region"
+            />
+        <ImageView
+            android:id="@+id/imgview_costo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/costo"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Descripciones"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+        <TextView
+            android:id="@+id/txtvFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3 octubre"
+            android:layout_weight="1"
+            android:textColor="@color/colorletras"
+            />
+        <TextView
+            android:id="@+id/txtvLugar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="San Jose"
+            android:layout_weight="1"
+            android:textColor="@color/colorletras"
+            />
+        <TextView
+            android:id="@+id/txtvcosto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gratis"
+            android:layout_weight="1"
+            android:textColor="@color/colorletras"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/biografia"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:gravity="left">
+
+        <TextView
+            android:id="@+id/txtvbiografia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Biografia:"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorletras"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/biografia1"
+        android:orientation="horizontal"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:gravity="left"
+        android:layout_weight="0.64">
+
+        <TextView
+            android:id="@+id/txtvbiografia1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Texto Descripción:"
+            android:layout_weight="1"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/redes"
+        android:orientation="horizontal"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:gravity="left"
+        android:layout_weight="0.64">
+
+        <TextView
+            android:id="@+id/txtvregistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REDES:"
+            android:layout_weight="1"
+            android:textColor="@color/colorletras"
+            />
+
+    </LinearLayout>
+
 
 </LinearLayout>
