@@ -2,13 +2,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
     tools:context=".MainActivity" >
 
     <GridView
         android:id="@+id/grid_id"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:numColumns="3" >
+        android:layout_height="fill_parent"
+        android:numColumns="auto_fit"
+        android:gravity="center"
+        android:columnWidth="200dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp" >
     </GridView>
+
 
 </RelativeLayout>
