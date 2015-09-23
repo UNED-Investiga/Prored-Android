@@ -2,6 +2,7 @@ package com.nansoft.prored.Adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,12 +27,21 @@ public class OpcionAdapter extends ArrayAdapter<Opcion>
     // contexto con el que se está trabajando
     Context mContext;
 
+    // variable para almacenar la ruta de la imagen
+    String rutaImagen;
+
+    // objeto que permite acceder a los recursos del sistema
+    Resources res;
+
     // constructor
     public OpcionAdapter(Context context, int layoutResourceId)
     {
         super(context, layoutResourceId);
         mContext = context;
         mLayoutResourceId = layoutResourceId;
+
+        // se obtienen los recursos
+        res = this.mContext.getResources();
     }
 
     // regresa la vista de cada elemento de la lista
@@ -65,6 +75,11 @@ public class OpcionAdapter extends ArrayAdapter<Opcion>
 
         // obtenemos el texto que viene en el objeto y se lo asignamos al item
         holder.txtvNombreOpcion.setText(currentItem.getNombre());
+
+
+
+        holder.imgvLogoOpcion.setImageResource(res.getIdentifier(currentItem.getUrlImagen(),
+                "drawable", mContext.getPackageName()));
 
 
 
