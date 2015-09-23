@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.nansoft.prored.Model.Opcion;
 import com.nansoft.prored.R;
 
@@ -78,8 +79,13 @@ public class OpcionAdapter extends ArrayAdapter<Opcion>
 
 
 
-        holder.imgvLogoOpcion.setImageResource(res.getIdentifier(currentItem.getUrlImagen(),
-                "drawable", mContext.getPackageName()));
+        Glide.with(mContext)
+                .load(currentItem.getUrlImagen().trim())
+                .asBitmap()
+                .fitCenter()
+                .placeholder(R.mipmap.cargar_imagen)
+                .error(R.mipmap.sin_imagen)
+                .into(holder.imgvLogoOpcion);
 
 
 
