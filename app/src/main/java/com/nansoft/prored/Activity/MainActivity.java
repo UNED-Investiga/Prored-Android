@@ -1,19 +1,15 @@
 package com.nansoft.prored.Activity;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.GridView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.nansoft.prored.Adapter.ImageAdapter;
 import com.nansoft.prored.Adapter.OpcionAdapter;
 import com.nansoft.prored.Model.Opcion;
 import com.nansoft.prored.R;
 
-public class MainActivity extends Activity
+public class MainActivity extends AppCompatActivity
 {
     static final String[] numbers = new String[] { "one", "two", "three",
             "four", "five", "six", "seven", "eight", "nine", "ten", "eleven",
@@ -35,7 +31,7 @@ public class MainActivity extends Activity
 
         gridView.setAdapter(opcionAdapter);
 
-        for (int i = 0; i <10; i++)
+        for (int i = 0; i <20; i++)
         {
             opcionAdapter.add(new Opcion("1","Opcion " + i,"na"));
         }
