@@ -1,75 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:weightSum="1">
+    android:id="@+id/principal"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/imgview"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="NOMBRE DEL EVENTO"
-        android:id="@+id/txtnombreevento"
-        android:layout_gravity="center_horizontal" />
+             <LinearLayout
+                android:id="@+id/fecha"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3">
+                 <TextView
+                    android:id="@+id/txtfecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha"
+                     android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/txtlugar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lugar"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/txtcosto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Costo"
+                    android:layout_weight="1" />
+             </LinearLayout>
+        <LinearLayout
+                android:id="@+id/todas_imgview"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+            <ImageView
+                android:id="@+id/imgview_fecha"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+            <ImageView
+                android:id="@+id/imgview_lugar"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/imgview_costo"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
 
-        />
-
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="150dp"
-        android:id="@+id/imageView"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.07" />
-
-    <TextView
-        android:layout_width="81dp"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="FECHA"
-        android:id="@+id/txtfecha"
-        android:layout_weight="0.10" />
-
-    <TextView
-        android:layout_width="81dp"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="LUGAR"
-        android:id="@+id/txtlugar"
-        android:layout_gravity="center_horizontal"
-        android:singleLine="true"
-        android:layout_weight="0.10" />
-
-    <TextView
-        android:layout_width="81dp"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="COSTO"
-        android:id="@+id/txtcosto"
-        android:layout_gravity="right" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="DESCRIPCION"
-        android:id="@+id/txtdescripcion" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/ptxtdescripcion"
-        android:layout_weight="0.37" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Registro:"
-        android:id="@+id/txtregistro" />
-
+        </LinearLayout>
 </LinearLayout>
+
+
+
+
+
+
+
