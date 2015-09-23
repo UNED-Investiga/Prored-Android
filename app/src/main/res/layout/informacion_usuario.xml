@@ -70,7 +70,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:src="@drawable/calendario"
+            android:src="@mipmap/email"
             />
 
         <ImageView
@@ -87,7 +87,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:src="@drawable/costo"
+            android:src="@drawable/administrator"
             />
 
     </LinearLayout>
@@ -102,7 +102,7 @@
             android:id="@+id/txtvFecha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="3 octubre"
+            android:text="jose@hotmail.com"
             android:layout_weight="1"
             android:textColor="@color/colorletras"
             />
@@ -113,14 +113,16 @@
             android:text="San Jose"
             android:layout_weight="1"
             android:textColor="@color/colorletras"
+            android:layout_marginLeft="25dp"
             />
         <TextView
             android:id="@+id/txtvcosto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Gratis"
+            android:text="Administrador"
             android:layout_weight="1"
             android:textColor="@color/colorletras"
+            android:layout_marginLeft="25dp"
             />
     </LinearLayout>
     <LinearLayout
