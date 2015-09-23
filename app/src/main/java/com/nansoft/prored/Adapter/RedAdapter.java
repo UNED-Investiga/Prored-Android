@@ -2,7 +2,6 @@ package com.nansoft.prored.Adapter;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,8 +54,8 @@ public class RedAdapter extends ArrayAdapter<Red>
             ViewHolder holder = new ViewHolder();
 
             // obtenemos la referencia a la imagen y el textview para después poder asignarles un valor
-            holder.imgvLogoRed = (ImageView) row.findViewById(R.id.imgvLogoRed);
-            holder.txtvNombreRed = (TextView) row.findViewById(R.id.txtNombreRed);
+            holder.imgvLogoRed = (ImageView) row.findViewById(R.id.imgvLogoItemGrid);
+            holder.txtvNombreRed = (TextView) row.findViewById(R.id.txtNombreItemGrid);
 
             // guardamos en memoria la vista
             row.setTag(holder);

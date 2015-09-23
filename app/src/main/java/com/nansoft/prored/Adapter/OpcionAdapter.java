@@ -9,9 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.nansoft.prored.Model.Opcion;
-import com.nansoft.prored.Model.Red;
 import com.nansoft.prored.R;
 
 /**
@@ -54,8 +52,8 @@ public class OpcionAdapter extends ArrayAdapter<Opcion>
             ViewHolder holder = new ViewHolder();
 
             // obtenemos la referencia a la imagen y el textview para después poder asignarles un valor
-           //holder.imgvLogoOpcion = (ImageView) row.findViewById(R.id.imgvLogoRed);
-            //holder.txtvNombreOpcion = (TextView) row.findViewById(R.id.txtNombreRed);
+            holder.imgvLogoOpcion = (ImageView) row.findViewById(R.id.imgvLogoItemGrid);
+            holder.txtvNombreOpcion = (TextView) row.findViewById(R.id.txtNombreItemGrid);
 
             // guardamos en memoria la vista
             row.setTag(holder);
@@ -66,7 +64,7 @@ public class OpcionAdapter extends ArrayAdapter<Opcion>
         ViewHolder holder = (ViewHolder) row.getTag();
 
         // obtenemos el texto que viene en el objeto y se lo asignamos al item
-        //holder.txtvNombreOpcion.setText(currentItem.getNombre());
+        holder.txtvNombreOpcion.setText(currentItem.getNombre());
 
 
 
