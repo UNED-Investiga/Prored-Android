@@ -9,6 +9,13 @@ public class Opcion
     private String nombre;
     private String urlImagen;
 
+    public Opcion(String id, String nombre, String urlImagen)
+    {
+        this.id = id;
+        this.nombre = nombre;
+        this.urlImagen = urlImagen;
+    }
+
     public String getId() {
         return id;
     }
