@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.nansoft.prored.Model.Evento;
-import com.nansoft.prored.Model.Red;
 
 /**
  * Created by Carlos on 16/09/2015.
