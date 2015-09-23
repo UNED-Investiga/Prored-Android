@@ -25,7 +25,7 @@
 
     <style name="stlLetras" parent="stlBaseComponent">
         <item name="android:textSize">20dp</item>
-        <item name="android:textColor">@color/negro</item>
+        <item name="android:textColor">@color/colorletras</item>
     </style>
 
 </resources>
