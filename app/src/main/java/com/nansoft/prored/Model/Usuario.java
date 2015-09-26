@@ -1,5 +1,7 @@
 package com.nansoft.prored.Model;
 
+import java.util.IdentityHashMap;
+
 /**
  * Created by PC on 16/09/2015.
  */
@@ -64,5 +66,17 @@ public class Usuario {
     public void setTelefono(String pTelefono){
         Telefono=pTelefono;
     }
+//Constructor
+    public Usuario(){
+        Id = "";
+        Nombre="";
+        PrimerApellido="";
+        SegundoApellido="";
+        Biografia="";
+        UrlImagen="";
+        Email="";
+        Telefono="";
+    }
+
 
 }
