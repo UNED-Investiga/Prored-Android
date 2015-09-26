@@ -42,5 +42,12 @@ public class Red {
     }
 
 
-    ////comentario12we
+    //Constructores
+    public Red(){
+        Id="";
+        Nombre="";
+        Descripcion="";
+        UrlImage="";
+        Id_Encargado="";
+    }
 }

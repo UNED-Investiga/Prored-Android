@@ -64,4 +64,5 @@ public class Usuario {
     public void setTelefono(String pTelefono){
         Telefono=pTelefono;
     }
+
 }
