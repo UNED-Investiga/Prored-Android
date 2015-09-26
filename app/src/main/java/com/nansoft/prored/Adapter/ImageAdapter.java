@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.nansoft.prored.R;
 
 /**
- * Created by PC on 17/09/2015.
+ * Created by Susana on 17/09/2015.
  */
 
     public class ImageAdapter extends BaseAdapter {

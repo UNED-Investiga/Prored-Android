@@ -1,24 +1,22 @@
 package com.nansoft.prored.Model;
 
-import java.util.Date;
-
 /**
  * Created by PC on 16/09/2015.
  */
 public class Evento {
-    private String Id;
+    private int Id;
     private String Nombre;
     private String Descripcion;
     private String UrlImagen;
-    private Date Fecha;
+    private String Fecha;
     private  String Costo;
     private String Direccion;
 
-    public String getId(){
+    public int getId(){
         return Id;
 
     }
-    public void setId(String pId){
+    public void setId(int pId){
         Id=pId;
     }
     public String getNombre() {
@@ -39,10 +37,10 @@ public class Evento {
     public void setUrlImagen(String pUrlImagen){
         UrlImagen=pUrlImagen;
     }
-    public Date getFecha(){
+    public String getFecha(){
         return Fecha;
     }
-    public void setFecha(Date pFecha){
+    public void setFecha(String pFecha){
         Fecha=pFecha;
     }
     public String getCosto(){
@@ -56,5 +54,18 @@ public class Evento {
     }
     public void setDireccion(String pdireccion){
         Direccion=pdireccion;
+    }
+//Se crea Constructor
+    public Evento(){
+        Id = 1;
+        Nombre ="Reunion Semanal de Prored";
+        Descripcion = "Reunion para tratar asuntos importantes acerca de los metodos de estudio de los estudiantes de la Uned";
+        UrlImagen ="https://www.google.com/search?q=te+amo&hl=es-419&biw=1538&bih=815&site=webhp&tbm=isch&imgil=MTsSlcVsc2eUpM%253A%253B7b07s1k8HVeTZM%253Bhttp%25253A%25252F%25252Fwww.imge1.tk%25252Fte-amo-6%25252F&source=iu&pf=m&fir=MTsSlcVsc2eUpM%253A%252C7b07s1k8HVeTZM%252C_&usg=__VeO3UXyzBmNr0dja1s-DWXD92zM%3D&ved=0CCcQyjdqFQoTCPGopt7Wk8gCFQqlHgod7_4J8w&ei=LQYGVrHeNYrKeu_9p5gP#hl=es-419&tbm=isch&q=reunion&imgrc=9mlaKoXXvK2UOM%3A";
+        Fecha = "01/10/2015";
+        Costo ="Gratis";
+        Direccion ="Vicerrectoria de Investigación";
+
+
+
     }
 }
