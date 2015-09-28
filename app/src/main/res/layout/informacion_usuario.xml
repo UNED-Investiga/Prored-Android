@@ -34,15 +34,13 @@
         android:layout_height="wrap_content"
         android:weightSum="3">
         <TextView
-            android:id="@+id/txtemail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Email"
             android:layout_weight="1"
             android:textColor="@color/colorletras"
-            />
+            android:id="@+id/" />
         <TextView
-            android:id="@+id/txtlugar1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Lugar"
@@ -50,7 +48,6 @@
             android:textColor="@color/colorletras"
             />
         <TextView
-            android:id="@+id/txtcargo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Cargo"
@@ -65,7 +62,6 @@
         android:layout_height="wrap_content"
         android:weightSum="3">
         <ImageView
-            android:id="@+id/imgview_fecha"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
@@ -74,7 +70,6 @@
             />
 
         <ImageView
-            android:id="@+id/imgview_lugar"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
@@ -82,7 +77,6 @@
             android:src="@drawable/region"
             />
         <ImageView
-            android:id="@+id/imgview_costo"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
