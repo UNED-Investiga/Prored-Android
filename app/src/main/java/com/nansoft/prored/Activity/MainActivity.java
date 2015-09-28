@@ -31,10 +31,23 @@ public class MainActivity extends AppCompatActivity
 
         gridView.setAdapter(opcionAdapter);
 
-        for (int i = 0; i <20; i++)
-        {
-            opcionAdapter.add(new Opcion("1","Opcion " + i,"na"));
-        }
+        // se agrega opción de redes
+        Opcion objOpcion = new Opcion();
+        objOpcion.setId("1");
+        objOpcion.setNombre("Redes");
+        objOpcion.setUrlImagen("http://thumbs.dreamstime.com/z/persona-que-se-ejecuta-con-la-carpeta-26499014.jpg");
+
+        // se agrega opción de eventos
+        Opcion objOpcion1 = new Opcion();
+        objOpcion1.setId("2");
+        objOpcion1.setNombre("Eventos");
+        objOpcion1.setUrlImagen("http://thumbs.dreamstime.com/z/persona-que-se-ejecuta-con-la-carpeta-26499014.jpg");
+
+        // se agregan las opciones en el adapter
+        opcionAdapter.add(objOpcion);
+        opcionAdapter.add(objOpcion1);
+
+
 
 
     }
