@@ -8,7 +8,6 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 
-import com.nansoft.prored.Adapter.ImageAdapter;
 import com.nansoft.prored.Adapter.OpcionAdapter;
 import com.nansoft.prored.Model.Opcion;
 import com.nansoft.prored.R;
@@ -16,15 +15,14 @@ import com.nansoft.prored.R;
 public class MainActivity extends AppCompatActivity
 {
 
-    GridView gridView;
-    ImageAdapter adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        gridView = (GridView) findViewById(R.id.grid_id);
+        GridView gridView = (GridView) findViewById(R.id.grid_id);
         //adapter=new  ImageAdapter(numbers, this);
         final OpcionAdapter opcionAdapter = new OpcionAdapter(this,R.layout.item_grid);
 
