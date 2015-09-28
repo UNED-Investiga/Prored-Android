@@ -78,7 +78,7 @@ public class OpcionAdapter extends ArrayAdapter<Opcion>
         holder.txtvNombreOpcion.setText(currentItem.getNombre());
 
 
-
+//comentario
         Glide.with(mContext)
                 .load(currentItem.getUrlImagen().trim())
                 .asBitmap()
