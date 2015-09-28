@@ -12,8 +12,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.nansoft.prored.Model.Opcion;
-import com.nansoft.prored.R;
 
+import com.nansoft.prored.R;
 /**
  * Created by Carlos on 20/09/2015.
  */
@@ -83,8 +83,8 @@ public class OpcionAdapter extends ArrayAdapter<Opcion>
                 .load(currentItem.getUrlImagen().trim())
                 .asBitmap()
                 .fitCenter()
-                .placeholder(R.mipmap.cargar_imagen)
-                .error(R.mipmap.sin_imagen)
+                .placeholder(R.drawable.cargar_imagen)
+                .error(R.drawable.sin_imagen)
                 .into(holder.imgvLogoOpcion);
 
 
