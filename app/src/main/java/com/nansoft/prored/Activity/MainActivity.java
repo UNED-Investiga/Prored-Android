@@ -1,8 +1,12 @@
 package com.nansoft.prored.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import com.nansoft.prored.Adapter.ImageAdapter;
 import com.nansoft.prored.Adapter.OpcionAdapter;
@@ -11,11 +15,6 @@ import com.nansoft.prored.R;
 
 public class MainActivity extends AppCompatActivity
 {
-    static final String[] numbers = new String[] { "one", "two", "three",
-            "four", "five", "six", "seven", "eight", "nine", "ten", "eleven",
-            "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
-            "seventeen", "eighteen", "nineteen", "twenty", "twenty one",
-            "twenty two" };
 
     GridView gridView;
     ImageAdapter adapter;
@@ -27,7 +26,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         gridView = (GridView) findViewById(R.id.grid_id);
         //adapter=new  ImageAdapter(numbers, this);
-        OpcionAdapter opcionAdapter = new OpcionAdapter(this,R.layout.item_grid);
+        final OpcionAdapter opcionAdapter = new OpcionAdapter(this,R.layout.item_grid);
 
         gridView.setAdapter(opcionAdapter);
 
@@ -48,7 +47,32 @@ public class MainActivity extends AppCompatActivity
         opcionAdapter.add(objOpcion1);
 
 
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+                Opcion objOpcionPresionado = opcionAdapter.getItem(position);
+
+                Intent objIntent = new Intent(getApplicationContext(),MainActivity.class);
+
+                switch (position)
+                {
+                    case 0:
+                        objIntent = new Intent(getApplicationContext(),RedActivity.class);
+                        startActivity(objIntent);
+                        break;
+
+                    case 1:
+                        // implementar intent de eventos
+                        break;
+                }
+
+
+
+                Toast.makeText(getApplicationContext(), objOpcionPresionado.getNombre(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
     }
 
