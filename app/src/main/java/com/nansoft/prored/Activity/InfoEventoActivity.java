@@ -10,7 +10,8 @@ import com.nansoft.prored.R;
 public class InfoEventoActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.informacion_eventos);
     }
