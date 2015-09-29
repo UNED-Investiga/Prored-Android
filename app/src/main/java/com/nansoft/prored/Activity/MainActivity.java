@@ -2,6 +2,7 @@ package com.nansoft.prored.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -20,6 +21,10 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        SwipeRefreshLayout mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swpActualizar);
+        mSwipeRefreshLayout.setEnabled(false);
+
         GridView gridView = (GridView) findViewById(R.id.grid_id);
         //adapter=new  ImageAdapter(numbers, this);
         final OpcionAdapter opcionAdapter = new OpcionAdapter(this,R.layout.item_grid);

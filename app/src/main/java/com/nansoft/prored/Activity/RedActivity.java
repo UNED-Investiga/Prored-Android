@@ -2,6 +2,7 @@ package com.nansoft.prored.Activity;
 
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -27,11 +28,16 @@ import java.net.MalformedURLException;
 public class RedActivity extends AppCompatActivity
 {
     RedAdapter redAdapter;
+    SwipeRefreshLayout mSwipeRefreshLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swpActualizar);
+
 
         // buscamos el grid view
         GridView gridView = (GridView) findViewById(R.id.grid_id);
@@ -48,10 +54,28 @@ public class RedActivity extends AppCompatActivity
 
                 Red objRed = redAdapter.getItem(position);
 
-                Intent objIntent = new Intent(getApplicationContext(),PerfilUsuarioActivity.class);
-                objIntent.putExtra("idEncargado",objRed.getId_Encargado());
+                Intent objIntent = new Intent(getApplicationContext(), PerfilUsuarioActivity.class);
+                objIntent.putExtra("idEncargado", objRed.getId_Encargado());
                 startActivity(objIntent);
 
+            }
+        });
+
+        mSwipeRefreshLayout.setColorSchemeResources(R.color.orange, R.color.green, R.color.blue);
+
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+                CargarRedes();
+            }
+
+        });
+
+        mSwipeRefreshLayout.post(new Runnable() {
+            @Override
+            public void run() {
+                mSwipeRefreshLayout.setRefreshing(true);
             }
         });
 
@@ -89,6 +113,7 @@ public class RedActivity extends AppCompatActivity
             @Override
             protected void onPreExecute()
             {
+                redAdapter.clear();
                 try
                 {
                     // se crea el objeto para conectar el mobile services
@@ -149,6 +174,9 @@ public class RedActivity extends AppCompatActivity
             {
 
                 // guardamos en las preferencias de usuario la versión de base de datos que tenemos
+
+                mSwipeRefreshLayout.setRefreshing(false);
+
 
             }
 

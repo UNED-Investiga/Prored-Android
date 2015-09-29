@@ -1,6 +1,7 @@
 package com.nansoft.prored.Activity;
 
 import android.os.AsyncTask;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -21,16 +22,33 @@ import java.net.MalformedURLException;
 public class PerfilUsuarioActivity extends AppCompatActivity {
 
 
-
+    SwipeRefreshLayout mSwipeRefreshLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.informacion_usuario);
 
-        String idEncargado  = getIntent().getExtras().getString("idEncargado");
+        final String idEncargado  = getIntent().getExtras().getString("idEncargado");
 
+        mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swpActualizarInfoUsuario);
+        mSwipeRefreshLayout.setColorSchemeResources(R.color.orange, R.color.green, R.color.blue);
 
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+                CargarInformacionUsuario(idEncargado);
+            }
+
+        });
+
+        mSwipeRefreshLayout.post(new Runnable() {
+            @Override
+            public void run() {
+                mSwipeRefreshLayout.setRefreshing(true);
+            }
+        });
         CargarInformacionUsuario(idEncargado);
 
 
@@ -117,7 +135,7 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
             protected void onPostExecute(Boolean success)
             {
 
-                // guardamos en las preferencias de usuario la versión de base de datos que tenemos
+                mSwipeRefreshLayout.setRefreshing(false);
 
             }
 
@@ -135,7 +153,6 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
         TextView txtvNombreUsuario = (TextView) findViewById(R.id.txtvNombreUsuario);
         txtvNombreUsuario.setText(objUsuario.getNombre());
 
-        Toast.makeText(getApplicationContext(),objUsuario.getNombre(),Toast.LENGTH_SHORT).show();
 
         // nombre usuario, biografía, lugar , cargo y email
     }
