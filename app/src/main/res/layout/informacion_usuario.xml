@@ -99,7 +99,7 @@
         android:layout_height="wrap_content"
         android:weightSum="3">
         <TextView
-            android:id="@+id/txtvemail"
+            android:id="@+id/txtvFecha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="jose@hotmail.com"
@@ -116,7 +116,7 @@
             android:layout_marginLeft="25dp"
             />
         <TextView
-            android:id="@+id/txtvcargo"
+            android:id="@+id/txtvcosto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Administrador"

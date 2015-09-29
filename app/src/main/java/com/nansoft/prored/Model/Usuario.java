@@ -1,18 +1,36 @@
 package com.nansoft.prored.Model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.IdentityHashMap;
 
 /**
  * Created by PC on 16/09/2015.
  */
 public class Usuario {
+
+    @SerializedName("id")
     private String Id;
+
+    @SerializedName("nombre")
     private String Nombre;
+
+    @SerializedName("primerapellido")
     private String PrimerApellido;
+
+    @SerializedName("segundoapellido")
     private String SegundoApellido;
+
+    @SerializedName("biografia")
     private String Biografia;
+
+    @SerializedName("urlimagen")
     private String UrlImagen;
+
+    @SerializedName("email")
     private String Email;
+
+    @SerializedName("telefono")
     private String Telefono;
 
     public String getId(){

@@ -4,4 +4,8 @@
     <color name="action_bar">#4E6B66</color>
     <color name="colorfondo">#EBE1C5</color>
     <color name="colorletras">#000000</color>
+
+    <color name="orange">#FF9900</color>
+    <color name="green">#009900</color>
+    <color name="blue">#000099</color>
 </resources>

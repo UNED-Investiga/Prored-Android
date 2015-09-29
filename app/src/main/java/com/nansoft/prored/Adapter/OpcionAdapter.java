@@ -12,8 +12,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.nansoft.prored.Model.Opcion;
-import com.nansoft.prored.R;
 
+import com.nansoft.prored.R;
 /**
  * Created by Carlos on 20/09/2015.
  */
@@ -78,7 +78,7 @@ public class OpcionAdapter extends ArrayAdapter<Opcion>
         holder.txtvNombreOpcion.setText(currentItem.getNombre());
 
 
-
+//comentario
         Glide.with(mContext)
                 .load(currentItem.getUrlImagen().trim())
                 .asBitmap()

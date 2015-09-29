@@ -7,7 +7,7 @@
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:id="@+id/imglogoevento"
+        android:id="@+id/imgvLogoEvento"
         android:layout_marginTop="63dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -17,8 +17,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nombre"
-        android:id="@+id/txtnombre"
-        android:layout_below="@+id/imglogoevento"
+        android:id="@+id/txtvNombreEvento"
+        android:layout_below="@+id/imgvLogoEvento"
         android:layout_centerHorizontal="true"
         android:textColor="@color/abc_input_method_navigation_guard"
 
@@ -28,9 +28,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Fecha"
-        android:id="@+id/txtfecha"
-        android:layout_below="@+id/txtnombre"
-        android:layout_alignLeft="@+id/txtnombre"
-        android:layout_alignStart="@+id/txtnombre"
+        android:id="@+id/txtvFechaEvento"
+        android:layout_below="@+id/txtvNombreEvento"
+        android:layout_alignLeft="@+id/txtvNombreEvento"
+        android:layout_alignStart="@+id/txtvNombreEvento"
         android:textColor="@color/abc_input_method_navigation_guard" />
 </RelativeLayout>

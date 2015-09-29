@@ -1,13 +1,25 @@
 package com.nansoft.prored.Model;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by PC on 16/09/2015.
  */
 public class Red {
+
+    @SerializedName("id")
     private String Id;
+
+    @SerializedName("nombre")
     private String Nombre;
+
+    @SerializedName("descripcion")
     private String Descripcion;
+
+    @SerializedName("urlimagen")
     private String UrlImage;
+
+    @SerializedName("idencargado")
     private String Id_Encargado;
 
     public String getId(){

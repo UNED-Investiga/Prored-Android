@@ -9,7 +9,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.nansoft.prored.Model.Evento;
+import com.nansoft.prored.R;
 
 /**
  * Created by Carlos on 16/09/2015.
@@ -50,8 +52,9 @@ public class EventoAdapter extends ArrayAdapter<Evento>
             row = inflater.inflate(mLayoutResourceId, parent, false);
             ViewHolder holder = new ViewHolder();
 
-            //holder.imgLogoEmpresaa = (ImageView) row.findViewById(R.id.imgvLogoEmpresaRuta);
-            //holder.txtvTituloRuta = (TextView) row.findViewById(R.id.txtvTituloRuta);
+            holder.imgvLogoEvento = (ImageView) row.findViewById(R.id.imgvLogoEvento);
+            holder.txtvNombreEvento = (TextView) row.findViewById(R.id.txtvNombreEvento);
+            holder.txtvFechaEveno = (TextView) row.findViewById(R.id.txtvFechaEvento);
 
             row.setTag(holder);
 
@@ -59,10 +62,20 @@ public class EventoAdapter extends ArrayAdapter<Evento>
         // en caso contrario la recuperamos
         ViewHolder holder = (ViewHolder) row.getTag();
 
-        //holder.imgLogoEmpresaa.setImageResource(res.getIdentifier(currentItem.getUrlImagen(),
-        //"drawable", mContext.getPackageName()));
+        holder.txtvNombreEvento.setText(currentItem.getNombre());
 
-        //holder.txtvTituloRuta.setText(currentItem.getNombreOpcion());
+        holder.txtvFechaEveno.setText(currentItem.getFecha());
+
+        Glide.with(mContext)
+                .load(currentItem.getUrlImagen().trim())
+                .asBitmap()
+                .fitCenter()
+                .placeholder(R.drawable.cargar_imagen)
+                .error(R.drawable.sin_imagen)
+                .into(holder.imgvLogoEvento);
+
+
+
         return row;
         //aaa
 
@@ -73,7 +86,8 @@ public class EventoAdapter extends ArrayAdapter<Evento>
     // guarda el estado de cada vista la primera vez que se dibuja
     static class ViewHolder
     {
-        protected ImageView imgvLogoRed;
-        protected TextView txtvNombreRed;
+        protected ImageView imgvLogoEvento;
+        protected TextView txtvNombreEvento;
+        protected TextView txtvFechaEveno;
     }
 }

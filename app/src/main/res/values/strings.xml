@@ -3,4 +3,8 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_red">RedActivity</string>
+    <string name="title_activity_perfil_usuario">PerfilUsuarioActivity</string>
+    <string name="title_activity_evento">EventoActivity</string>
+    <string name="title_activity_info_evento">InfoEventoActivity</string>
 </resources>

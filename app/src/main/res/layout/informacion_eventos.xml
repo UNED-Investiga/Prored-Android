@@ -11,7 +11,7 @@
     >
         <TextView
 
-            android:id="@+id/nombreevento"
+            android:id="@+id/txtvNombreEvento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -36,37 +36,40 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:weightSum="3">
+
                  <TextView
-                    android:id="@+id/txtfecha"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Fecha"
                     android:layout_weight="1"
                     android:textColor="@color/colorletras"
-                     />
+                     android:gravity="center_horizontal" />
+
                 <TextView
-                    android:id="@+id/txtlugar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Lugar"
                     android:layout_weight="1"
                     android:textColor="@color/colorletras"
-                    />
+                    android:gravity="center_horizontal" />
+
                 <TextView
-                    android:id="@+id/txtcosto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Costo"
                     android:layout_weight="1"
                     android:textColor="@color/colorletras"
-                    />
+                    android:gravity="center_horizontal" />
+
              </LinearLayout>
+
         <LinearLayout
                 android:id="@+id/todas_imgview"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:weightSum="3">
+
             <ImageView
                 android:id="@+id/imgview_fecha"
                 android:layout_width="50dp"
@@ -84,6 +87,7 @@
                 android:layout_weight="1"
                 android:src="@drawable/region"
                 />
+
             <ImageView
                 android:id="@+id/imgview_costo"
                 android:layout_width="50dp"
@@ -101,6 +105,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="3">
+
         <TextView
             android:id="@+id/txtvFecha"
             android:layout_width="match_parent"
@@ -108,7 +113,8 @@
             android:text="3 octubre"
             android:layout_weight="1"
             android:textColor="@color/colorletras"
-            />
+            android:gravity="center_horizontal" />
+
         <TextView
             android:id="@+id/txtvLugar"
             android:layout_width="match_parent"
@@ -116,24 +122,20 @@
             android:text="San Jose"
             android:layout_weight="1"
             android:textColor="@color/colorletras"
-            />
+            android:gravity="center_horizontal" />
+
         <TextView
-            android:id="@+id/txtvcosto"
+            android:id="@+id/txtvCosto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Gratis"
             android:layout_weight="1"
             android:textColor="@color/colorletras"
-            />
+            android:gravity="center_horizontal" />
+
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/descripcion"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="2"
-        android:gravity="left">
+
 
         <TextView
             android:id="@+id/txtvdescripcion"
@@ -144,7 +146,7 @@
             android:layout_marginTop="20dp"
             android:textColor="@color/colorletras"
             />
-    </LinearLayout>
+
 
 
         <TextView
