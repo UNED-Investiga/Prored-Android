@@ -15,8 +15,6 @@ import com.nansoft.prored.R;
 public class MainActivity extends AppCompatActivity
 {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

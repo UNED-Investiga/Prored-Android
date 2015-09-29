@@ -1,15 +1,31 @@
 package com.nansoft.prored.Model;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by PC on 16/09/2015.
  */
 public class Evento {
+
+    @SerializedName("id")
     private int Id;
+
+    @SerializedName("nombre")
     private String Nombre;
+
+    @SerializedName("descripcion")
     private String Descripcion;
+
+    @SerializedName("urlimagen")
     private String UrlImagen;
+
+    @SerializedName("fecha")
     private String Fecha;
+
+    @SerializedName("costo")
     private  String Costo;
+
+    @SerializedName("direccion")
     private String Direccion;
 
     public int getId(){

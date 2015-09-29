@@ -20,6 +20,8 @@ import java.net.MalformedURLException;
 
 public class PerfilUsuarioActivity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -28,12 +30,9 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
 
         String idEncargado  = getIntent().getExtras().getString("idEncargado");
 
-        Usuario objUsuario = new Usuario();
-        objUsuario.setId("1");
-        objUsuario.setNombre("Susuana");
 
-        // pendiente borrar, agregar atributos
-        desplegarInformacionUsuario(objUsuario);
+        CargarInformacionUsuario(idEncargado);
+
 
     }
 
@@ -59,11 +58,11 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void CargarInformacionUsuario()
+    private void CargarInformacionUsuario(final String pIdUsuario)
     {
         new AsyncTask<Void, Void, Boolean>() {
             MobileServiceClient mClient;
-            MobileServiceTable<Red> tableRed;
+            MobileServiceTable<Usuario> tableUsuario;
             @Override
             protected void onPreExecute()
             {
@@ -76,7 +75,7 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
                             getApplicationContext());
 
                     // se obtiene la referencia de la tabla
-                    tableRed = mClient.getTable("Red", Red.class);
+                    tableUsuario = mClient.getTable("User", Usuario.class);
                 }
                 catch  (MalformedURLException exception)
                 {
@@ -92,12 +91,18 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
             @Override
             protected Boolean doInBackground(Void... params)
             {
-                try {
+                try
+                {
+                    // se busca el usuario que coincida con el id enviado
+                    final Usuario objUsuario = tableUsuario.lookUp(pIdUsuario).get();
 
-                    final MobileServiceList<Red> result = tableRed.execute().get();
-
-
-
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            // se llama la función encargada de cargar los datos en la vista
+                            desplegarInformacionUsuario(objUsuario);
+                        }
+                    });
 
 
                     return true;
@@ -127,8 +132,10 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
     private void desplegarInformacionUsuario(Usuario objUsuario)
     {
         // deplegar la informaciön del usuario
-        TextView txtvNombreUsuario = (TextView) findViewById(R.id.nombreusuario);
+        TextView txtvNombreUsuario = (TextView) findViewById(R.id.txtvNombreUsuario);
         txtvNombreUsuario.setText(objUsuario.getNombre());
+
+        Toast.makeText(getApplicationContext(),objUsuario.getNombre(),Toast.LENGTH_SHORT).show();
 
         // nombre usuario, biografía, lugar , cargo y email
     }
