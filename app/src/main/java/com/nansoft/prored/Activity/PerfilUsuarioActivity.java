@@ -150,7 +150,7 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
     private void desplegarInformacionUsuario(Usuario objUsuario)
     {
         // deplegar la informaciön del usuario
-        TextView txtvNombreUsuario = (TextView) findViewById(R.id.txtvNombreUsuario);
+        TextView txtvNombreUsuario = (TextView) findViewById(R.id.nombreusuario);
         txtvNombreUsuario.setText(objUsuario.getNombre());
 
 
