@@ -49,7 +49,8 @@ public class InfoEventoActivity extends AppCompatActivity {
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+            {
 
                 Opcion objOpcionPresionado = opcionAdapter.getItem(position);
 
