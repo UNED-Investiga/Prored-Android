@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity
 
                     case 1:
                         // implementar intent de eventos
-                        objIntent = new Intent(getApplicationContext(),InfoEventoActivity.class);
+                        objIntent = new Intent(getApplicationContext(),EventoActivity.class);
                         startActivity(objIntent);
                         break;
                 }
