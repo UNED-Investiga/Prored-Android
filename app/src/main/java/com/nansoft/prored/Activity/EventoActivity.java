@@ -51,7 +51,7 @@ public class EventoActivity extends AppCompatActivity {
 
                 Evento objEvento = adapter.getItem(position);
 
-                Intent objIntent = new Intent(getApplicationContext(), PerfilUsuarioActivity.class);
+                Intent objIntent = new Intent(getApplicationContext(), InfoEventoActivity.class);
                 objIntent.putExtra("idEvento", objEvento.getId());
                 startActivity(objIntent);
 

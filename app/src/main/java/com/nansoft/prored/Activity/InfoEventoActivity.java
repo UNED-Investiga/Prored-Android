@@ -1,76 +1,140 @@
 package com.nansoft.prored.Activity;
 
-import android.content.Intent;
+
+import android.os.AsyncTask;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.GridView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.nansoft.prored.Adapter.OpcionAdapter;
-import com.nansoft.prored.Model.Opcion;
+import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
+import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
+import com.nansoft.prored.Helper.MobileServiceHelper;
+import com.nansoft.prored.Model.Evento;
+import com.nansoft.prored.Model.Usuario;
 import com.nansoft.prored.R;
+
+import java.net.MalformedURLException;
 
 public class InfoEventoActivity extends AppCompatActivity {
 
+    SwipeRefreshLayout mSwipeRefreshLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.informacion_eventos);
-        SwipeRefreshLayout mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swpActualizar);
-        mSwipeRefreshLayout.setEnabled(false);
 
-        GridView gridView = (GridView) findViewById(R.id.grid_id);
-        //adapter=new  ImageAdapter(numbers, this);
-        final OpcionAdapter opcionAdapter = new OpcionAdapter(this,R.layout.item_evento);
+        // se obtiene el id del elemento seleccionado
+        final String idEvento  = getIntent().getExtras().getString("idEvento");
 
-        gridView.setAdapter(opcionAdapter);
 
-        // se agrega opción de redes
-        Opcion objOpcion = new Opcion();
-        objOpcion.setId("1");
-        objOpcion.setNombre("Eventos1");
-        objOpcion.setUrlImagen("http://princesasofia.expohotels.com/wp-content/uploads/2014/12/eventos-empresa-5.jpg");
+        // obtenemos la referencia al swipe refresh layout
+        mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swpActualizarInfoEvento);
 
-        // se agrega opción de eventos
-        Opcion objOpcion1 = new Opcion();
-        objOpcion1.setId("2");
-        objOpcion1.setNombre("Eventos2");
-        objOpcion1.setUrlImagen("http://www.tribulinux.com/wp-content/uploads/2008/07/eventos.jpg");
+        // establecemos los colores de carga
+        mSwipeRefreshLayout.setColorSchemeResources(R.color.orange, R.color.green, R.color.blue);
 
-        // se agregan las opciones en el adapter
-        opcionAdapter.add(objOpcion);
-        opcionAdapter.add(objOpcion1);
-
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        // establecemos la acción que se debe realizar cuando el usuario desliza el dedo hacia abajo para actualizar
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-            {
+            public void onRefresh() {
 
-                Opcion objOpcionPresionado = opcionAdapter.getItem(position);
+                CargarInformacionEvento(idEvento);
+            }
 
-                Intent objIntent = new Intent(getApplicationContext(), MainActivity.class);
+        });
 
-                switch (position) {
-                    case 0:
-                        objIntent = new Intent(getApplicationContext(), RedActivity.class);
-                        startActivity(objIntent);
-                        break;
-
-                    case 1:
-                        // implementar intent de eventos
-                        break;
-                }
-
-
-                Toast.makeText(getApplicationContext(), objOpcionPresionado.getNombre(), Toast.LENGTH_SHORT).show();
-
+        mSwipeRefreshLayout.post(new Runnable() {
+            @Override
+            public void run() {
+                mSwipeRefreshLayout.setRefreshing(true);
             }
         });
+        CargarInformacionEvento(idEvento);
+
     }
+
+    private void CargarInformacionEvento(final String pIdEvento)
+    {
+        new AsyncTask<Void, Void, Boolean>() {
+            MobileServiceClient mClient;
+            MobileServiceTable<Evento> tableEvento;
+            @Override
+            protected void onPreExecute()
+            {
+                try
+                {
+                    // se crea el objeto para conectar el mobile services
+                    mClient =  new MobileServiceClient(
+                            MobileServiceHelper.URL_MOBILE_SERVICES,
+                            MobileServiceHelper.KEY_MOBILE_SERVICES,
+                            getApplicationContext());
+
+                    // se obtiene la referencia de la tabla
+                    tableEvento = mClient.getTable("Evento", Evento.class);
+                }
+                catch  (MalformedURLException exception)
+                {
+                    Toast.makeText(getApplicationContext(), "Error al conectar con Mobile Services", Toast.LENGTH_SHORT).show();
+                }
+                catch(Exception e)
+                {
+                    Toast.makeText(getApplicationContext(),"Error al obtener referencia de la tabla",Toast.LENGTH_SHORT).show();
+                }
+
+            }
+
+            @Override
+            protected Boolean doInBackground(Void... params)
+            {
+                try
+                {
+                    // se busca el usuario que coincida con el id enviado
+                    final Evento objEvento = tableEvento.lookUp(pIdEvento).get();
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            // se llama la función encargada de cargar los datos en la vista
+                            desplegarInformacionEvento(objEvento);
+                        }
+                    });
+
+
+                    return true;
+                } catch (final Exception exception) {
+
+                    return false;
+                }
+
+            }
+
+            @Override
+            protected void onPostExecute(Boolean success)
+            {
+
+                mSwipeRefreshLayout.setRefreshing(false);
+
+            }
+
+            @Override
+            protected void onCancelled() {
+                super.onCancelled();
+            }
+        }.execute();
+    }
+
+    // trabajar en esta función
+    private void desplegarInformacionEvento(Evento objEvento)
+    {
+        // deplegar la informaciön del usuario
+        TextView txtvNombreEvento = (TextView) findViewById(R.id.txtvNombreEvento);
+        txtvNombreEvento.setText(objEvento.getNombre());
+
+
+        // nombre usuario, biografía, lugar , cargo y email
+    }
+
 }
