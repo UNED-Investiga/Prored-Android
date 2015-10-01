@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:weightSum="1"
-            android:background="@color/colorfondo"
+            android:background="@drawable/iPad-Air1536x2048"
             android:padding="15dp"
 
             >
