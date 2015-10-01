@@ -33,7 +33,7 @@
                     android:textColor="@color/colorletras"
                     android:gravity="center_horizontal"
 
-                    />
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/imgFotoEvento"
