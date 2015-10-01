@@ -23,7 +23,8 @@
         android:textColor="#FFFFFF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:textSize="25dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,5 +32,6 @@
         android:text="Fecha"
         android:id="@+id/txtfecha"
         android:layout_gravity="center_horizontal"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
 </LinearLayout>
