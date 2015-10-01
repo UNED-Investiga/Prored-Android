@@ -132,6 +132,15 @@ public class InfoEventoActivity extends AppCompatActivity {
         // deplegar la informaciön del usuario
         TextView txtvNombreEvento = (TextView) findViewById(R.id.txtvNombreEvento);
         txtvNombreEvento.setText(objEvento.getNombre());
+        TextView txtvFecha =(TextView) findViewById(R.id.txtvFecha);
+        txtvFecha.setText(objEvento.getFecha());
+
+        TextView txtvLugar =(TextView) findViewById(R.id.txtvLugar);
+        txtvLugar.setText(objEvento.getDireccion());
+        TextView txtvCosto =(TextView) findViewById(R.id.txtvCosto);
+        txtvCosto.setText(objEvento.getCosto());
+        TextView txtvDescripción =(TextView) findViewById(R.id.txtvDescripcion);
+        txtvDescripción.setText(objEvento.getDescripcion());
 
 
         // nombre usuario, biografía, lugar , cargo y email
