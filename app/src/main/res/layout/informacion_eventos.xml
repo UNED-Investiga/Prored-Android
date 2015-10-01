@@ -28,17 +28,17 @@
                     android:id="@+id/txtvNombreEvento"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:text="Nombre del Evento"
                     android:textColor="@color/colorletras"
                     android:gravity="center_horizontal"
 
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textSize="@dimen/abc_action_button_min_width_overflow_material" />
 
                 <ImageView
                     android:id="@+id/imgFotoEvento"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:src="@drawable/investiga"
 
