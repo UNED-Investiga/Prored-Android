@@ -10,6 +10,7 @@
 
     <ImageView
         android:id="@+id/imgvLogoItemGrid"
+        android:src="@drawable/usuario"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
@@ -18,7 +19,7 @@
     <TextView
         style="@style/stlLetras"
         android:gravity="center"
-        android:text="Nombre Red"
+        android:text="Maynor Barrientos"
         android:id="@+id/txtNombreItemGrid"
         android:textColor="#FFFFFF"
         android:layout_width="wrap_content"
