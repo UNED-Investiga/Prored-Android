@@ -35,13 +35,13 @@ public class MainActivity extends AppCompatActivity
         Opcion objOpcion = new Opcion();
         objOpcion.setId("1");
         objOpcion.setNombre("Redes");
-        objOpcion.setUrlImagen("http://thumbs.dreamstime.com/z/persona-que-se-ejecuta-con-la-carpeta-26499014.jpg");
+        objOpcion.setUrlImagen("https://purisinfo.blob.core.windows.net/img/group.png");
 
         // se agrega opción de eventos
         Opcion objOpcion1 = new Opcion();
         objOpcion1.setId("2");
         objOpcion1.setNombre("Eventos");
-        objOpcion1.setUrlImagen("http://thumbs.dreamstime.com/z/persona-que-se-ejecuta-con-la-carpeta-26499014.jpg");
+        objOpcion1.setUrlImagen("https://purisinfo.blob.core.windows.net/img/event.png");
 
         // se agregan las opciones en el adapter
         opcionAdapter.add(objOpcion);
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity
 
 
 
-                Toast.makeText(getApplicationContext(), objOpcionPresionado.getNombre(), Toast.LENGTH_SHORT).show();
+
 
             }
         });

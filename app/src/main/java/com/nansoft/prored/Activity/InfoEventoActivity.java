@@ -3,8 +3,11 @@ package com.nansoft.prored.Activity;
 
 import android.os.AsyncTask;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +28,11 @@ public class InfoEventoActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.informacion_eventos);
+
+        // Set up action bar.
+        ActionBar bar = getSupportActionBar();
+        bar.show();
+        bar.setDisplayHomeAsUpEnabled(true);
 
         // se obtiene el id del elemento seleccionado
         final String idEvento  = getIntent().getExtras().getString("idEvento");
@@ -54,6 +62,30 @@ public class InfoEventoActivity extends AppCompatActivity {
         });
         CargarInformacionEvento(idEvento);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_info_evento, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        switch(item.getItemId())
+        {
+            case android.R.id.home:
+                super.onBackPressed();
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     private void CargarInformacionEvento(final String pIdEvento)
