@@ -3,6 +3,7 @@ package com.nansoft.prored.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -35,6 +36,11 @@ public class RedActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Set up action bar.
+        ActionBar bar = getSupportActionBar();
+        bar.show();
+        bar.setDisplayHomeAsUpEnabled(true);
 
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swpActualizar);
 
@@ -203,9 +209,11 @@ public class RedActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch(item.getItemId())
+        {
+            case android.R.id.home:
+                super.onBackPressed();
+                break;
         }
 
         return super.onOptionsItemSelected(item);
