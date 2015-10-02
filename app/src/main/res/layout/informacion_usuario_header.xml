@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layInfoUsuario"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:weightSum="1"
+    android:background="@color/item_usuario">
+
+    <TextView
+
+        android:id="@+id/txtvNombreUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:text="Nombre Usuario"
+        android:textColor="@color/colorletras"
+
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imgvFotoUsuario"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/usuario"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/datos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Email"
+            android:textColor="@color/colorletras" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Lugar"
+            android:textColor="@color/colorletras" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Cargo"
+            android:textColor="@color/colorletras" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/todas_imgview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/email" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/region" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/administrator" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Descripciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/txtvEmailUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="jose@hotmail.com"
+            android:textColor="@color/colorletras" />
+
+        <TextView
+            android:id="@+id/txtvDireccionUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="San Jose"
+            android:textColor="@color/colorletras" />
+
+        <TextView
+            android:id="@+id/txtvCargoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Administrador"
+            android:textColor="@color/colorletras" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Biografia:"
+        android:textColor="@color/colorletras"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtvBiografia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Texto Descripción:" />
+
+    <TextView
+        android:id="@+id/txtvregistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REDES:"
+        android:textColor="@color/colorletras"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

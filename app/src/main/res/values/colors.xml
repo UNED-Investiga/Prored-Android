@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="negro">#000000</color>
-    <color name="action_bar">#4E6B66</color>
-    <color name="colorfondo">#EBE1C5</color>
+    <color name="action_bar">#315b99</color>
+    <color name="colorfondo">#f7f7f7</color>
     <color name="colorletras">#000000</color>
+    <color name="item_usuario">#FFF</color>
+    <color name="titulo_item_usuario">#3c3b3b</color>
 
     <color name="orange">#FF9900</color>
     <color name="green">#009900</color>
