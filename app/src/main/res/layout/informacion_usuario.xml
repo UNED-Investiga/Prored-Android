@@ -6,7 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/colorfondo">
+    android:background="@color/colorfondo"
+    android:id="@+id/">
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/swpActualizarInfoUsuario"
@@ -18,7 +19,8 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:dividerHeight="10dp"
-            android:divider="@null"/>
+            android:divider="@null"
+            android:background="@drawable/fondo1" />
 
     </android.support.v4.widget.SwipeRefreshLayout>
 
