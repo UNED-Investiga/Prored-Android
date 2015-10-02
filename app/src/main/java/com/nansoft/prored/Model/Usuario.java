@@ -21,6 +21,13 @@ public class Usuario {
     @SerializedName("segundoapellido")
     private String SegundoApellido;
 
+    @SerializedName("direccion")
+    private String Direccion;
+
+    @SerializedName("cargo")
+    private String Cargo;
+
+
     @SerializedName("biografia")
     private String Biografia;
 
@@ -60,6 +67,18 @@ public class Usuario {
     public void setSegundoApellido(String pSegundoApellido){
         SegundoApellido=pSegundoApellido;
     }
+    public String getDireccion(){
+        return Direccion;
+    }
+    public void setDireccion(String pDireccion){
+        Direccion=pDireccion;
+    }
+    public String getCargo(){
+        return Cargo;
+    }
+    public void setCargo(String pcargo){
+        Direccion=pcargo;
+    }
     public String getBiografia(){
         return Biografia;
     }
@@ -90,11 +109,15 @@ public class Usuario {
         Nombre="";
         PrimerApellido="";
         SegundoApellido="";
+        Direccion="";
+        Cargo="";
         Biografia="";
         UrlImagen="";
         Email="";
         Telefono="";
     }
+
+
 
 
 }

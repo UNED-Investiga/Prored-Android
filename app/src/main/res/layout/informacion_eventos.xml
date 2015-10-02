@@ -37,10 +37,10 @@
 
                 <ImageView
                     android:id="@+id/imgFotoEvento"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/investiga"
+                    android:src="@drawable/evento2"
 
                     />
 

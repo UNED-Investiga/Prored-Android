@@ -246,8 +246,17 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
     {
         // deplegar la informaciön del usuario
         txtvNombreUsuario.setText(objUsuario.getNombre());
-
         setTitle(objUsuario.getNombre());
+        txtvEmailUsuario.setText(objUsuario.getEmail());
+        setTitle(objUsuario.getEmail());
+        txtvDireccionUsuario.setText(objUsuario.getDireccion());
+        setTitle(objUsuario.getDireccion());
+        txtvCargoUsuario.setText(objUsuario.getCargo());
+        setTitle(objUsuario.getCargo());
+        txtvBiografia.setText(objUsuario.getBiografia());
+        setTitle(objUsuario.getBiografia());
+
+
         // usar imgvFotoUsuario, txtvNombreUsuario, txtvEmailUsuario, txtvDireccionUsuario, txtvCargoUsuario,txtvBiografia;
     }
 }
