@@ -8,7 +8,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/imgvLogoEvento"
-        android:src="@drawable/investiga"
+        android:src="@drawable/evento6"
         android:layout_marginTop="63dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
