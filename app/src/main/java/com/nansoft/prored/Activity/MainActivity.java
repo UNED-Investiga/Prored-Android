@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity
 
 
 
-                Toast.makeText(getApplicationContext(), objOpcionPresionado.getNombre(), Toast.LENGTH_SHORT).show();
+
 
             }
         });
