@@ -248,6 +248,6 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
         txtvNombreUsuario.setText(objUsuario.getNombre());
 
         setTitle(objUsuario.getNombre());
-        // nombre usuario, biografía, lugar , cargo y email
+        // usar imgvFotoUsuario, txtvNombreUsuario, txtvEmailUsuario, txtvDireccionUsuario, txtvCargoUsuario,txtvBiografia;
     }
 }
