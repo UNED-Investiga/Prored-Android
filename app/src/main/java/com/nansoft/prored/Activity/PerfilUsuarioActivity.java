@@ -36,7 +36,7 @@ import java.util.ArrayList;
 public class PerfilUsuarioActivity extends AppCompatActivity {
 
 
-    private static final  R = ;
+
     SwipeRefreshLayout mSwipeRefreshLayout;
 
 
