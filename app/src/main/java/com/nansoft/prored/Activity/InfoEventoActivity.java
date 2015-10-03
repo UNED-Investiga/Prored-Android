@@ -168,7 +168,6 @@ public class InfoEventoActivity extends AppCompatActivity {
         txtvNombreEvento.setText(objEvento.getNombre());
         TextView txtvFecha =(TextView) findViewById(R.id.txtvFecha);
         txtvFecha.setText(objEvento.getFecha());
-
         TextView txtvLugar =(TextView) findViewById(R.id.txtvLugar);
         txtvLugar.setText(objEvento.getDireccion());
         TextView txtvCosto =(TextView) findViewById(R.id.txtvCosto);
