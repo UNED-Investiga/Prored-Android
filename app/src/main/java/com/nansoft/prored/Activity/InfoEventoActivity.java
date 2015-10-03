@@ -8,9 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
 import com.nansoft.prored.Helper.MobileServiceHelper;
@@ -173,7 +175,15 @@ public class InfoEventoActivity extends AppCompatActivity {
         txtvCosto.setText(objEvento.getCosto());
         TextView txtvDescripción =(TextView) findViewById(R.id.txtvDescripcion);
         txtvDescripción.setText(objEvento.getDescripcion());
+        ImageView imgFotoEvento = (ImageView) findViewById(R.id.imgFotoEvento);
 
+        Glide.with(this)
+                .load(objEvento.getUrlImagen().trim())
+                .asBitmap()
+                .fitCenter()
+                .placeholder(R.drawable.cargar_imagen)
+                .error(R.drawable.sin_imagen)
+                .into(imgFotoEvento);
 
         // nombre usuario, biografía, lugar , cargo y email
     }
