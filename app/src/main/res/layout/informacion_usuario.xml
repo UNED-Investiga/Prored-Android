@@ -20,7 +20,7 @@
             android:layout_height="fill_parent"
             android:dividerHeight="10dp"
             android:divider="@null"
-            android:background="@drawable/fondo1" />
+            android:background="@color/primary_text_disabled_material_light" />
 
     </android.support.v4.widget.SwipeRefreshLayout>
 

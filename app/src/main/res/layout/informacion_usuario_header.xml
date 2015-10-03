@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:padding="15dp"
     android:weightSum="1"
-    android:background="@drawable/fondo1">
+    android:background="@color/primary_text_disabled_material_light">
 
     <TextView
 
@@ -18,15 +18,15 @@
         android:text="Nombre Usuario"
         android:textColor="@color/colorletras"
 
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textSize="25dp" />
 
     <ImageView
         android:id="@+id/imgvFotoUsuario"
-        android:layout_width="100dp"
+        android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_gravity="center"
         android:src="@drawable/usuario"
-
+        android:scaleType="fitXY"
         />
 
     <LinearLayout
@@ -42,7 +42,8 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="Email"
-            android:textColor="@color/colorletras" />
+            android:textColor="@color/colorletras"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
@@ -50,7 +51,8 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="Lugar"
-            android:textColor="@color/colorletras" />
+            android:textColor="@color/colorletras"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
@@ -58,7 +60,8 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="Cargo"
-            android:textColor="@color/colorletras" />
+            android:textColor="@color/colorletras"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout

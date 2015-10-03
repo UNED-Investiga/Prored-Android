@@ -2,7 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="100dp"
-    android:background="@drawable/fondo1">
+    android:background="@color/primary_dark_material_light">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -11,7 +11,8 @@
         android:layout_marginLeft="6dp"
         android:layout_marginRight="6dp"
         android:layout_marginTop="4dp"
-        android:padding="6dip" >
+        android:padding="6dip"
+        android:background="@color/primary_text_disabled_material_light">
 
         <com.nansoft.prored.Helper.CircularImageView
             xmlns:app="http://schemas.android.com/apk/res/com.nansoft.prored"
@@ -36,9 +37,11 @@
             android:layout_alignParentRight="true"
             android:layout_toRightOf="@id/imgvFotoAmigo"
             android:textSize="16sp"
-            android:textColor="@color/titulo_item_usuario"
+            android:textColor="#0a0a0a"
             android:gravity="center_vertical"
-            style="@style/Base.AlertDialog.AppCompat" />
+            style="@style/Base.AlertDialog.AppCompat"
+            android:textStyle="bold"
+            android:background="@color/primary_text_disabled_material_light" />
     </RelativeLayout>
 
 </FrameLayout>

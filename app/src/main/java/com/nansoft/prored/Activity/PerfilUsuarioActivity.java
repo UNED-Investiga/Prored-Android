@@ -1,6 +1,7 @@
 package com.nansoft.prored.Activity;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBar;
@@ -17,6 +18,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.MobileServiceList;
 import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
@@ -248,15 +250,21 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
         txtvNombreUsuario.setText(objUsuario.getNombre());
         setTitle(objUsuario.getNombre());
         txtvEmailUsuario.setText(objUsuario.getEmail());
-        setTitle(objUsuario.getEmail());
         txtvDireccionUsuario.setText(objUsuario.getDireccion());
-        setTitle(objUsuario.getDireccion());
         txtvCargoUsuario.setText(objUsuario.getCargo());
-        setTitle(objUsuario.getCargo());
         txtvBiografia.setText(objUsuario.getBiografia());
-        setTitle(objUsuario.getBiografia());
 
 
+        // establecer imagen local en imageview
+        imgvFotoUsuario.setImageResource(R.drawable.administrator);
+
+        Glide.with(this)
+                .load(objUsuario.getUrlImagen().trim())
+                .asBitmap()
+                .fitCenter()
+                .placeholder(R.drawable.cargar_imagen)
+                .error(R.drawable.sin_imagen)
+                .into(imgvFotoUsuario);
         // usar imgvFotoUsuario, txtvNombreUsuario, txtvEmailUsuario, txtvDireccionUsuario, txtvCargoUsuario,txtvBiografia;
     }
 }
