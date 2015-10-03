@@ -36,6 +36,7 @@ import java.util.ArrayList;
 public class PerfilUsuarioActivity extends AppCompatActivity {
 
 
+    private static final  R = ;
     SwipeRefreshLayout mSwipeRefreshLayout;
 
 
@@ -256,7 +257,7 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
 
 
         // establecer imagen local en imageview
-        imgvFotoUsuario.setImageResource(R.drawable.administrator);
+       // imgvFotoUsuario.setImageResource(R.drawable.administrator);
 
         Glide.with(this)
                 .load(objUsuario.getUrlImagen().trim())

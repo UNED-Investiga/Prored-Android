@@ -25,7 +25,7 @@
         android:id="@+id/imgvFotoUsuario"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:src="@drawable/usuario"
+        android:ImageUrl="http://images.all-free-download.com/images/graphiclarge/user_91161.jpg"
         android:scaleType="fitXY"
         />
 

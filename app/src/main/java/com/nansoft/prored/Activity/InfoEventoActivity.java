@@ -161,7 +161,7 @@ public class InfoEventoActivity extends AppCompatActivity {
     // trabajar en esta función
     private void desplegarInformacionEvento(Evento objEvento)
     {
-        // deplegar la informaciön del usuario
+        // deplegar la informaciön del evento
         TextView txtvNombreEvento = (TextView) findViewById(R.id.txtvNombreEvento);
         txtvNombreEvento.setText(objEvento.getNombre());
         TextView txtvFecha =(TextView) findViewById(R.id.txtvFecha);
