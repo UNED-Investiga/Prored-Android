@@ -23,7 +23,7 @@
             android:stretchMode="columnWidth"
             android:verticalSpacing="10dp"
             android:horizontalSpacing="10dp"
-            android:background="@color/primary_text_disabled_material_light">
+            android:background="#ffffff">
         </GridView>
 
     </android.support.v4.widget.SwipeRefreshLayout>
