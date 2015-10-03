@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent" android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
     android:background="@color/primary_text_disabled_material_light"
     >
 
@@ -12,6 +13,7 @@
         android:layout_marginTop="63dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
         />
 
     <TextView
@@ -21,9 +23,10 @@
         android:id="@+id/txtvNombreEvento"
         android:layout_below="@+id/imgvLogoEvento"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/abc_input_method_navigation_guard"
+        android:textColor="#1d17ff"
 
-        android:textSize="25dp" />
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
