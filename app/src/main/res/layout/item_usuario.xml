@@ -2,7 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="100dp"
-    android:background="@color/primary_dark_material_light">
+    android:background="#ffffff">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -12,7 +12,7 @@
         android:layout_marginRight="6dp"
         android:layout_marginTop="4dp"
         android:padding="6dip"
-        android:background="@color/primary_text_disabled_material_light">
+        android:background="#ffffff">
 
         <com.nansoft.prored.Helper.CircularImageView
             xmlns:app="http://schemas.android.com/apk/res/com.nansoft.prored"
@@ -39,13 +39,14 @@
             android:textColor="#1d17ff"
             android:gravity="center_vertical"
             style="@style/Base.AlertDialog.AppCompat"
-            android:background="@color/secondary_text_default_material_dark"
+            android:background="#ffffff"
             android:theme="@style/Base.TextAppearance.AppCompat.Button"
             android:textStyle="bold"
             android:textIsSelectable="false"
             android:clickable="false"
             android:elegantTextHeight="false"
             android:focusable="false" />
+
     </RelativeLayout>
 
 </FrameLayout>
