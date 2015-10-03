@@ -21,11 +21,12 @@
         android:gravity="center"
         android:text="Maynor Barrientos"
         android:id="@+id/txtNombreItemGrid"
-        android:textColor="#FFFFFF"
+        android:textColor="#1d17ff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textSize="25dp" />
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"

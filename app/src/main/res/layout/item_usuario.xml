@@ -19,14 +19,13 @@
             android:id="@+id/imgvFotoAmigo"
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:src="@drawable/usuario"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentTop="true"
             android:layout_marginRight="10dp"
             app:border="true"
             app:border_color="@color/celeste"
             app:border_width="1dp"
-            app:shadow="true"/>
+            app:shadow="true"
+            android:layout_alignParentTop="true" />
 
 
         <TextView
@@ -36,12 +35,17 @@
             android:text="Maynor Barrientos"
             android:layout_alignParentRight="true"
             android:layout_toRightOf="@id/imgvFotoAmigo"
-            android:textSize="16sp"
-            android:textColor="#0a0a0a"
+            android:textSize="20dp"
+            android:textColor="#1d17ff"
             android:gravity="center_vertical"
             style="@style/Base.AlertDialog.AppCompat"
+            android:background="@color/secondary_text_default_material_dark"
+            android:theme="@style/Base.TextAppearance.AppCompat.Button"
             android:textStyle="bold"
-            android:background="@color/primary_text_disabled_material_light" />
+            android:textIsSelectable="false"
+            android:clickable="false"
+            android:elegantTextHeight="false"
+            android:focusable="false" />
     </RelativeLayout>
 
 </FrameLayout>
