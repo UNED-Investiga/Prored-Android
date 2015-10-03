@@ -16,7 +16,7 @@
         android:layout_gravity="center"
         android:gravity="center_horizontal"
         android:text="Nombre Usuario"
-        android:textColor="@color/colorletras"
+        android:textColor="#1d17ff"
 
         android:textStyle="bold"
         android:textSize="25dp" />
@@ -42,7 +42,7 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="Email"
-            android:textColor="@color/colorletras"
+            android:textColor="#1d17ff"
             android:textStyle="bold" />
 
         <TextView
@@ -51,7 +51,7 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="Lugar"
-            android:textColor="@color/colorletras"
+            android:textColor="#1d17ff"
             android:textStyle="bold" />
 
         <TextView
@@ -60,7 +60,7 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="Cargo"
-            android:textColor="@color/colorletras"
+            android:textColor="#1d17ff"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -134,7 +134,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Biografia:"
-        android:textColor="@color/colorletras"
+        android:textColor="#1d17ff"
         android:textStyle="bold" />
 
     <TextView
@@ -148,7 +148,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="REDES:"
-        android:textColor="@color/colorletras"
+        android:textColor="#1d17ff"
         android:textStyle="bold" />
 
 
