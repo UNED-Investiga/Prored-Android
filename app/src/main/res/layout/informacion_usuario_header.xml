@@ -25,6 +25,7 @@
         android:id="@+id/imgvFotoUsuario"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:src="@drawable/usuario"
         android:scaleType="fitXY"
         />
 
