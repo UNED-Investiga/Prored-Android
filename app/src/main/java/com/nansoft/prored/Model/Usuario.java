@@ -21,10 +21,9 @@ public class Usuario {
     @SerializedName("segundoapellido")
     private String SegundoApellido;
 
-    @SerializedName("direccion")
-    private String Direccion;
 
-    @SerializedName("cargo")
+
+
     private String Cargo;
 
 
@@ -39,6 +38,9 @@ public class Usuario {
 
     @SerializedName("telefono")
     private String Telefono;
+
+    @SerializedName("direccion")
+    private String Direccion;
 
     public String getId(){
         return Id;
@@ -74,7 +76,7 @@ public class Usuario {
         Direccion=pDireccion;
     }
     public String getCargo(){
-        return Cargo;
+        return "Administrador";
     }
     public void setCargo(String pcargo){
         Direccion=pcargo;
