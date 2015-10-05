@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
@@ -33,17 +34,17 @@ public class EventoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_eventos);
 
         // Set up action bar.
         ActionBar bar = getSupportActionBar();
         bar.show();
         bar.setDisplayHomeAsUpEnabled(true);
 
-        mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swpActualizar);
+        mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swpActualizarEventos);
 
-        // buscamos el grid view
-        GridView gridView = (GridView) findViewById(R.id.grid_id);
+        // buscamos el list view
+        ListView gridView = (ListView) findViewById(R.id.lstvEventos);
 
         // creamos el adapter de tipo red
         adapter = new EventoAdapter(this,R.layout.item_evento);

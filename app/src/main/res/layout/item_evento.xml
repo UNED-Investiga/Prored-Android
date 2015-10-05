@@ -6,13 +6,10 @@
     >
 
     <ImageView
-        android:layout_width="800dp"
-        android:layout_height="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
         android:id="@+id/imgvLogoEvento"
         android:src="@drawable/evento2"
-        android:layout_marginTop="63dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:scaleType="fitXY"
         />
 
