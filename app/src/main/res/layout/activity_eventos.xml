@@ -18,6 +18,8 @@
             android:id="@+id/lstvEventos"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
+            android:dividerHeight="10dp"
+            android:divider="@null"
             android:stretchMode="columnWidth"/>
 
 
