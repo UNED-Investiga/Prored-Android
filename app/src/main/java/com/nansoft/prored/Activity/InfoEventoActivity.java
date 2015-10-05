@@ -180,7 +180,7 @@ public class InfoEventoActivity extends AppCompatActivity {
                 .load(objEvento.getUrlImagen().trim())
                 .asBitmap()
                 .fitCenter()
-                .placeholder(R.drawable.cargar_imagen)
+                .placeholder(R.drawable.descargar_imagen)
                 .error(R.drawable.sin_imagen)
                 .into(imgFotoEvento);
 
