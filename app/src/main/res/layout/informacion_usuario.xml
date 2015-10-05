@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#ffffff"
+    android:background="@color/colorfondo"
     android:id="@+id/principal">
 
     <android.support.v4.widget.SwipeRefreshLayout
@@ -19,8 +19,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:dividerHeight="10dp"
-            android:divider="@null"
-            android:background="#ffffff" />
+            android:divider="@null" />
 
     </android.support.v4.widget.SwipeRefreshLayout>
 

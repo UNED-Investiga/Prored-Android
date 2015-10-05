@@ -4,9 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="10dp"
     android:padding="15dp"
     android:weightSum="1"
-    android:background="#ffffff">
+    android:background="@color/blanco">
 
     <TextView
 
@@ -24,7 +25,7 @@
     <ImageView
         android:id="@+id/imgvFotoUsuario"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="300dp"
         android:src="@drawable/usuario"
         android:scaleType="fitXY"
         />
