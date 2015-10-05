@@ -263,7 +263,7 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
                 .load(objUsuario.getUrlImagen().trim())
                 .asBitmap()
                 .fitCenter()
-                .placeholder(R.drawable.cargar_imagen)
+                .placeholder(R.drawable.descargar_imagen)
                 .error(R.drawable.sin_imagen)
                 .into(imgvFotoUsuario);
         // usar imgvFotoUsuario, txtvNombreUsuario, txtvEmailUsuario, txtvDireccionUsuario, txtvCargoUsuario,txtvBiografia;
