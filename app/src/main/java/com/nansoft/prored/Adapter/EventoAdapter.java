@@ -70,7 +70,7 @@ public class EventoAdapter extends ArrayAdapter<Evento>
                 .load(currentItem.getUrlImagen().trim())
                 .asBitmap()
                 .fitCenter()
-                .placeholder(R.drawable.cargar_imagen)
+                .placeholder(R.drawable.descargar_imagen)
                 .error(R.drawable.sin_imagen)
                 .into(holder.imgvLogoEvento);
 
