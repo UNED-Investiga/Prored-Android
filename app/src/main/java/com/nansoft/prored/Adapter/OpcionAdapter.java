@@ -83,7 +83,7 @@ public class OpcionAdapter extends ArrayAdapter<Opcion>
                 .load(currentItem.getUrlImagen().trim())
                 .asBitmap()
                 .fitCenter()
-                .placeholder(R.drawable.cargar_imagen)
+                .placeholder(R.drawable.descargar_imagen)
                 .error(R.drawable.sin_imagen)
                 .into(holder.imgvLogoOpcion);
 
