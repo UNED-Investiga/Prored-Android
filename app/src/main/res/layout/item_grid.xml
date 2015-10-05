@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:padding="8dp"
     android:layout_margin="10dp"
-    android:background="#ffffff">
+    android:background="@color/action_bar">
 
     <ImageView
         android:id="@+id/imgvLogoItemGrid"
@@ -21,7 +21,7 @@
         android:gravity="center"
         android:text="Maynor Barrientos"
         android:id="@+id/txtNombreItemGrid"
-        android:textColor="#1d17ff"
+        android:textColor="@color/blanco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
